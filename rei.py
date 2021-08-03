@@ -22,7 +22,6 @@ def reconhecer_casas(index, adversario, finalidade = 0,* num):
         else:
             pass
 
-
 def reconhecer_jogadas(index, adversario):
         x = index % 8
         if x == 0:
@@ -32,7 +31,6 @@ def reconhecer_jogadas(index, adversario):
         else:
             reconhecer_casas(index, adversario, 0, 1, -1, 7, 8, 9, -7, -8, -9)
            
-
 def reconhecer_time(index):
     if dados_do_tabuleiro[index]['time'] == 'preto':
         reconhecer_jogadas(index, 'branco')
