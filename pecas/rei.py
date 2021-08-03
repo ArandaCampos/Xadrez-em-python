@@ -6,7 +6,7 @@
 # * Anda uma casa em qualquer direção 
 #-------------------------------------------------------
 
-import comando, tela_check
+import comando
 from visual import dados_do_tabuleiro
         
 def reconhecer_casas(index, adversario, finalidade = 0,* num):

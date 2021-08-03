@@ -1,5 +1,5 @@
 from visual import dados_do_tabuleiro
-import cavalo, torre, bispo, rei
+from pecas import cavalo, torre, rei, bispo
 
 def localizar_rei(x = 0, y = 63):
     while dados_do_tabuleiro[x]['peca'] != 'rei':

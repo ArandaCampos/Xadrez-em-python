@@ -7,8 +7,7 @@
 #-------------------------------------------------------
 
 from visual import dados_do_tabuleiro
-import torre
-import bispo
+from pecas import torre, bispo
         
 def reconhecer_time(index):
     if dados_do_tabuleiro[index]['time'] == 'preto':

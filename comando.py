@@ -9,7 +9,9 @@
 # * Pintar as casas possíveis conforme retorno da função
 #-------------------------------------------------------
 
-import validacao, peao, torre, bispo, cavalo, rainha, rei
+
+from pecas import peao, torre, cavalo, rainha, rei, bispo
+import validacao
 from visual import dados_do_tabuleiro, dados_casas, marrom, vermelho
 
 lista_index = []

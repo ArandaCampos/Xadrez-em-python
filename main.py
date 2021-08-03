@@ -18,6 +18,7 @@ game.jogo()
 
 #-------------------------------------------------------
 # Falta implementar
+# * Criar pacotes das modularizações das peças
 # * bug: quando o peão ainda não sofreu nenhuma jogada, ele consegue andar duas casas mesmo com uma peça a sua frente 
 # * Testar recursividade no Bispo e na Torre e verificar a velocidade de processamento
 # * checkmate
