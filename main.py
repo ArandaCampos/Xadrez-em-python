@@ -4,7 +4,7 @@
 #
 # Implementação:
 # * inicializar pygame
-# * chamar as funções game 
+# * chamar as funções game
 #-------------------------------------------------------
 
 import pygame
@@ -17,11 +17,12 @@ game.jogo()
 
 #-------------------------------------------------------
 # Falta implementar
-# * Criar pacotes das modularizações das peças
-# * bug: quando o peão ainda não sofreu nenhuma jogada, ele consegue andar duas casas mesmo com uma peça a sua frente 
-# * Testar recursividade no Bispo e na Torre e verificar a velocidade de processamento
+# * bug: quando o peão ainda não sofreu nenhuma jogada, ele consegue andar duas casas mesmo com uma peça a sua frente
 # * checkmate
-# * Quando o peão chegar na extremidade oposta ele pode virar um bispo, ou cavalo, ou torre, ou dama
-# * Tela de restart 
+# * Quando o peão chegar na extremidade oposta ele pode tornar-se um bispo, ou cavalo, ou torre, ou dama
+# ------------------------------------------------------
+# Futuras implementações
+# * Telas de menu inicial, recomeçar, checkmate
+# * Cronometro
 #-------------------------------------------------------
-            
+
