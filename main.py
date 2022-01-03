@@ -4,7 +4,7 @@
 #
 # Implementação:
 # * inicializar pygame
-# * chamar as funções visual e game 
+# * chamar as funções game 
 #-------------------------------------------------------
 
 import pygame
@@ -14,7 +14,6 @@ import game
 pygame.init()
 
 game.jogo()
-
 
 #-------------------------------------------------------
 # Falta implementar

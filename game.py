@@ -7,11 +7,10 @@
 # * criar os eventos 
 #-------------------------------------------------------
 
-import checkmate
 import pygame
 import visual
 import comando
-from visual import branco, dados_do_tabuleiro, tela, largura_tela
+from visual import branco, tela, largura_tela
 from pygame.constants import KEYDOWN, K_UP, MOUSEBUTTONDOWN, MOUSEBUTTONUP, QUIT
 
 def jogo():
@@ -41,14 +40,7 @@ def jogo():
             if event.type == MOUSEBUTTONUP:
                 if event.button == 1:
                     primeiro_click = not primeiro_click
-                    
-                
-            # o movimento de peças será feito através do index da lista coordenadas_peças[i]
-            if event.type == KEYDOWN:
-                if event.key == K_UP:
-                    index = 8 + 8
-                    dados_do_tabuleiro[8]['coordenada'] = dados_do_tabuleiro[index]['coordenada']
-        
+       
         visual.casas(largura_tela)
         visual.desenhar_tabuleiro()
         visual.posicao()

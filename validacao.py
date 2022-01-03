@@ -7,7 +7,7 @@
 # * Restaurar a cor do tabuleiro 
 #-------------------------------------------------------
 
-import checkmate
+import check
 from visual import dados_do_tabuleiro, dados_casas, marrom_claro, marrom, marrom_escuro, vermelho, musica_andar
 
 c = 0
@@ -21,7 +21,7 @@ def efetuar_jogada(index, lista_index):
     dados_do_tabuleiro[lista_index[0]]['time'] = 'vazio'
     dados_do_tabuleiro[index]['dados'] = False
     musica_andar.play()
-    checkmate.localizar_rei()
+    check.localizar_rei()
 
 def restaurar_cor(lista_index):
     for n in range(8):

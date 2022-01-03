@@ -27,8 +27,7 @@ def reconhecer_jogadas(index, aliado, adversario, finalidade = 0):
                         comando.pintar(posicao, str(adversario))
                         continuar = False
                 elif dados_do_tabuleiro[posicao]['peca'] == 'bispo' or dados_do_tabuleiro[posicao]['peca'] == 'rainha':
-                    print('Checkmate bispo')
-                    continuar = False
+                    return dados_do_tabuleiro[posicao]
                 else:
                     pass
                 vertical += 1

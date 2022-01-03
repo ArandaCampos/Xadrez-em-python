@@ -11,6 +11,7 @@ import comando
 from visual import dados_do_tabuleiro
        
 def reconhecer_jogadas(index, aliado, adversario, finalidade = 0):
+    continuar = True
     for sentido_y in range(-1,2,2):
         for sentido_x in range(-1,2,2):
             for modulo_y in range(1,3):
@@ -18,15 +19,14 @@ def reconhecer_jogadas(index, aliado, adversario, finalidade = 0):
                 y = index // 8 + modulo_y * sentido_y
                 x = index % 8 + modulo_x * sentido_x
                 posicao = y * 8 + x
-                if y >= 0 and y <= 7 and x >= 0 and x <= 7 and posicao <= 63 and dados_do_tabuleiro[posicao]['time'] != str(aliado): 
+                if y >= 0 and y <= 7 and x >= 0 and x <= 7 and posicao <= 63 and dados_do_tabuleiro[posicao]['time'] != str(aliado) and continuar == True: 
                     if finalidade == 0:
                         if dados_do_tabuleiro[posicao]['peca'] == 'vazio':   
                             comando.pintar(posicao, 'vazio')
                         else:
                             comando.pintar(posicao, str(adversario))
                     elif dados_do_tabuleiro[posicao]['peca'] == 'cavalo' or dados_do_tabuleiro[posicao]['peca'] == 'rainha':
-                        print('Checkmate cavalo')
-                        continuar = False
+                        return dados_do_tabuleiro[posicao]
                     else:
                         pass
 

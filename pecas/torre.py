@@ -26,8 +26,7 @@ def reconhecer_jogadas(index, aliado, adversario, finalidade = 0):
                     continuar = False
             else:
                 if dados_do_tabuleiro[posicao]['peca'] == 'torre' or dados_do_tabuleiro[posicao]['peca'] == 'rainha':
-                    print('Checkmate torre')
-                    continuar = False
+                    return dados_do_tabuleiro[posicao]
                 elif dados_do_tabuleiro[posicao]['peca'] == 'vazio':
                     pass
             n +=1

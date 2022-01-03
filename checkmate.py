@@ -1,18 +1,33 @@
-from visual import dados_do_tabuleiro
-from pecas import cavalo, torre, rei, bispo
+#-------------------------------------------------------
+# Autor: Renan Aranda
+# Projeto: Xadrez em Python
+#
+# Implementação:
+# * Possibilidade do rei se movimentar e sair do check
+# * Possibilidade de alguma peça aliada interceptar o ataque
+#
+# Tarefas:
+# * Possibilidade do rei se movimentar e sair do check
+# * Possibilidade de alguma peça aliada interceptar o ataque
+#
+#-------------------------------------------------------
 
-def localizar_rei(x = 0, y = 63):
-    while dados_do_tabuleiro[x]['peca'] != 'rei':
-        x += 1
-        
-    while dados_do_tabuleiro[y]['peca'] != 'rei':
-        y -= 1
+from pecas import rei
 
-    cavalo.reconhecer_jogadas(x, 'preto', 'branco', 1)
-    cavalo.reconhecer_jogadas(y, 'branco', 'preto', 1)
-    torre.reconhecer_jogadas(x, 'preto', 'branco', 1)
-    torre.reconhecer_jogadas(y, 'branco', 'preto', 1)
-    bispo.reconhecer_jogadas(x, 'preto', 'branco', 1)
-    bispo.reconhecer_jogadas(y, 'branco', 'preto', 1)
-    rei.reconhecer_casas(x, 'branco', 1, 7, 9)
-    rei.reconhecer_casas(y, 'preto', 1, -7, -9)
+def movimentacaoRei(index, adversario):
+    x = index % 8
+    if x == 0:
+        movimentacao = rei.reconhecer_casas(index, adversario, 2, 1, 8, 9, -7, -8)
+    elif x == 7: 
+        movimentacao = rei.reconhecer_casas(index, adversario, 2, -1, 7, 8, -8, -9)
+    else:
+        movimentacao = rei.reconhecer_casas(index, adversario, 2, 1, -1, 7, 8, 9, -7, -8, -9)
+    
+    print(movimentacao)
+    if movimentacao == None:
+        possibilidade_de_interceptacao()
+    else:
+        print('pode andar')
+    
+def possibilidade_de_interceptacao():
+    print('possibilidade de intercecptacao')
