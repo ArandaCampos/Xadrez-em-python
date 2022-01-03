@@ -8,7 +8,8 @@ Com o objetivo de por em práticas uma aplicação com lógicas mais complexa, a
 
 O jogo segue as regras tradicionais: o jogador com as peças pretas inicia o jogo; cada peça respeita seus conjuntos de regras particulares de movimentação e captura de adversários; vence quem imobilizar o rei adversário primeiro.
 
-![xadrez_py](https://user-images.githubusercontent.com/87876734/147946180-300203a7-371d-4100-a5eb-0ad183bb8b23.gif)
+![xadrez-py](https://user-images.githubusercontent.com/87876734/147949379-23065061-4008-4e75-a9e4-1ab48a0d7ef3.gif)
+
 
 ## Como jogar
 
